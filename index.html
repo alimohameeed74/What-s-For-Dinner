@@ -3,12 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>What's For Dinner</title>
+    <link rel="icon" href="img/FavIcon/favicon.png" />
     <link rel="stylesheet" href="Style/all.min.css" />
     <link rel="stylesheet" href="Style/bootstrap.min.css" />
     <link rel="stylesheet" href="Style/index.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-xl container-fluid px-xl-4">
+        <div class="navbar-brand d-flex align-items-center">
+          <i
+            class="fa-solid fa-utensils d-flex justify-content-center align-items-center text-white me-3 rounded-circle p-4"
+          ></i>
+          <div class="d-flex flex-column justify-content-between">
+            <h1 class="fw-bold my-auto">What's For Dinner</h1>
+            <p class="h1-p fw-normal my-auto">Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="ms-md-auto mt-md-0 mt-3 py-3 py-md-0 icons-list">
+            <div
+              class="d-flex justify-content-md-between align-items-md-center justify-content-start flex-column flex-md-row"
+            >
+              <span class="ms-md-4 mb-4 mb-md-0 ms-0 icons">
+                <i class="fa-solid fa-bookmark"></i>
+                <span class="d-md-none fw-normal icons-name">
+                  Saved Recipes
+                </span>
+              </span>
+              <span class="icons ms-md-4 mb-4 mb-md-0 ms-0">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span class="d-md-none fw-normal icons-name"> Recent </span>
+              </span>
+
+              <span class="icons ms-md-4 mb-4 mb-md-0 ms-0">
+                <i class="fa-solid fa-gear"></i>
+                <span class="d-md-none fw-normal icons-name"> Settings </span>
+              </span>
+              <span class="icons ms-md-4 ms-0">
+                <img
+                  class="nav-img rounded-circle"
+                  src="img/Avatars/profile-picture.jpg"
+                />
+                <span class="d-md-none fw-normal icons-name"> Profile </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <script src="js/index.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
