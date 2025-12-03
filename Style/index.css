@@ -200,7 +200,7 @@ body{
 }
 
 .adjust-photo-height{
-    max-height: 40% !important;
+    height: 400px;
 }
 
 .food-card-details {
@@ -291,15 +291,13 @@ body{
 }
 
 
-.nav-link {
-    --bs-nav-link-padding-x: 0;
-}
 
 
 .nav-and-tabs .nav-tabs .nav-link {
     --bs-nav-link-font-size: var(--fz-16);
     position: relative;
     transition: 0.3s all ease;
+    --bs-nav-link-padding-x:0;
 }
 
 .nav-and-tabs .nav-tabs .nav-link::after{
@@ -536,8 +534,8 @@ overflow-x: hidden;
 @media (min-width: 576px) {
 
 
-.nav-link {
-    --bs-nav-link-padding-x: 22px;
+.nav-and-tabs .nav-tabs .nav-link {
+    --bs-nav-link-padding-x: var(--v-22px);
 }
 
 
@@ -789,7 +787,7 @@ h1{
 
     
 .adjust-photo-height{
-    max-height: 100% !important;
+    height: 100% !important;
 }
 
 }
