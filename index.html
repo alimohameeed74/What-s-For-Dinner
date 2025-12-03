@@ -83,7 +83,7 @@
                 class="img-fluid object-fit-cover h-100 food-img"
               />
               <div
-                class="position-absolute food-making-info py-4 bg-white rounded-4 d-flex justify-content-evenly"
+                class="position-absolute food-making-info py-2 py-sm-4 bg-white rounded-4 d-flex justify-content-evenly"
               >
                 <div class="d-flex flex-column align-items-center">
                   <i class="fa-solid fa-clock"></i>
@@ -104,10 +104,8 @@
               </div>
             </div>
             <div class="col-lg-7 h-100">
-              <div
-                class="food-card-details px-3 py-5 pe-5 overflow-y-scroll h-100"
-              >
-                <div class="d-flex justify-content-start mb-2">
+              <div class="food-card-details px-3 py-5 pe-lg-5 h-100">
+                <div class="d-flex justify-content-start mb-3">
                   <span
                     class="me-3 rounded-pill fw-semibold py-1 px-3 green-bg"
                   >
@@ -117,11 +115,13 @@
                     Mediterranean
                   </span>
                 </div>
-                <div class="d-flex justify-content-between">
+                <div
+                  class="d-flex flex-column-reverse flex-sm-row justify-content-between align-items-sm-center align-items-start align-items-sm-center"
+                >
                   <div>
-                    <h2 class="fw-bold food-name">French Onion Soup</h2>
+                    <h2 class="fw-bold food-name mb-0">French Onion Soup</h2>
                   </div>
-                  <div class="d-flex align-items-center">
+                  <div class="d-flex ms-auto ms-sm-0">
                     <i
                       class="fa-solid fa-bookmark py-3 px-4 rounded-3 d-flex justify-content-center"
                     ></i>
@@ -133,6 +133,434 @@
                 <p class="fw-normal food-des">
                   Rich beef broth with caramelized onions and melted cheese
                 </p>
+                <div
+                  class="warning-note rounded-3 p-3 mb-3 d-flex justify-content-start"
+                >
+                  <i
+                    class="fa-solid d-flex align-items-center justify-content-center fa-triangle-exclamation me-2"
+                  ></i>
+                  <div class="d-flex flex-column">
+                    <h3 class="fw-semibold mb-0">Extended Preparation Time</h3>
+                    <p class="fw-normal mb-0">
+                      This recipe requires more than 45 minutes to prepare. Plan
+                      accordingly!
+                    </p>
+                  </div>
+                </div>
+                <div class="nav-and-tabs mt-4">
+                  <ul
+                    class="nav nav-tabs justify-content-between mx-3"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="Ingredients-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Ingredients-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="Ingredients-tab-pane"
+                        aria-selected="true"
+                      >
+                        <i class="fa-solid fa-list-check me-2"></i>
+                        Ingredients
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="Instructions-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Instructions-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="Instructions-tab-pane"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid me-2 fa-book-open"></i>
+                        Instructions
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="Nutrition-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Nutrition-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="Nutrition-tab-pane"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid me-2 fa-chart-pie"></i>
+                        Nutrition
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="Chef-Tips-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Chef-Tips-tab-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="Chef-Tips-tab-pane"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid me-2 fa-lightbulb"></i>
+                        Chef's Tips
+                      </button>
+                    </li>
+                  </ul>
+                  <div
+                    class="tab-content mt-3 border-top border-bottom py-3"
+                    id="myTabContent"
+                  >
+                    <div
+                      class="tab-pane fade show active rounded-4 p-3"
+                      id="Ingredients-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="Ingredients-tab"
+                      tabindex="0"
+                    >
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          1</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          4 large onions, thinly sliced
+                        </p>
+                      </div>
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          2</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          4 tablespoons butter
+                        </p>
+                      </div>
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          3</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          1 liter beef broth
+                        </p>
+                      </div>
+
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          4</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          1/2 cup white wine
+                        </p>
+                      </div>
+
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          5</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          2 bay leaves
+                        </p>
+                      </div>
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          6</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          Fresh thyme
+                        </p>
+                      </div>
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          7</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          Baguette slices
+                        </p>
+                      </div>
+                      <div
+                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
+                        >
+                          8</span
+                        >
+                        <p class="Ingredients-item-p fw-normal mb-0">
+                          200g Gruyère cheese, grated
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade overflow-y-scroll"
+                      id="Instructions-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="Instructions-tab"
+                      tabindex="0"
+                    >
+                      <div
+                        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          1</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Melt butter in a large pot. Add onions and cook slowly
+                          for 40 minutes, stirring occasionally until
+                          caramelized.
+                        </p>
+                      </div>
+                      <div
+                        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          2</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Add white wine and deglaze the pot, scraping up brown
+                          bits.
+                        </p>
+                      </div>
+                      <div
+                        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          3</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Pour in beef broth, add bay leaves and thyme. Simmer
+                          for 20 minutes.
+                        </p>
+                      </div>
+                      <div
+                        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          4</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Meanwhile, toast baguette slices until golden.
+                        </p>
+                      </div>
+                      <div
+                        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          5</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Ladle soup into oven-safe bowls. Top with toasted
+                          bread and cheese.
+                        </p>
+                      </div>
+                      <div
+                        class="Instructions-item mb-3 d-flex justify-content-start align-items-center"
+                      >
+                        <span
+                          class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+                        >
+                          6</span
+                        >
+                        <p class="Instructions-item-p fw-normal mb-0">
+                          Broil for 3-5 minutes until cheese is melted and
+                          bubbly. Serve hot.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="Nutrition-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="Nutrition-tab"
+                      tabindex="0"
+                    >
+                      <div class="row g-3">
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-fire icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name">Calories</span>
+                            <span class="Nutrition-item-quantity ms-auto">
+                              380 kcal
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-dumbbell icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name">Protein</span>
+                            <span class="Nutrition-item-quantity ms-auto">
+                              18g
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-wheat-awn icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name"
+                              >Carbohydrates</span
+                            >
+                            <span class="Nutrition-item-quantity ms-auto">
+                              36g
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-droplet icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name"> Fat </span>
+                            <span class="Nutrition-item-quantity ms-auto">
+                              18g
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-seedling icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name"> Fiber </span>
+                            <span class="Nutrition-item-quantity ms-auto">
+                              4g
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="p-3 Nutrition-item rounded-4 d-flex justify-content-start align-items-center"
+                          >
+                            <i
+                              class="fa-solid fa-cube icon-adjustment me-3 rounded-3 d-flex align-items-center justify-content-center"
+                            ></i>
+                            <span class="Nutrition-item-name"> Sodium </span>
+                            <span class="Nutrition-item-quantity ms-auto">
+                              980mg
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="Chef-Tips-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="Chef-Tips-tab"
+                      tabindex="0"
+                    >
+                      <div
+                        class="Chef-Tips-content rounded-3 px-3 py-4 mb-3 d-flex justify-content-start"
+                      >
+                        <i
+                          class="fa-solid fa-circle-check d-flex align-items-center justify-content-center me-2"
+                        ></i>
+
+                        <p class="fw-normal mb-0 Chef-Tips-content-p">
+                          Patience is key - don't rush the onion caramelization
+                        </p>
+                      </div>
+                      <div
+                        class="Chef-Tips-content rounded-3 px-3 py-4 mb-3 d-flex justify-content-start"
+                      >
+                        <i
+                          class="fa-solid fa-circle-check d-flex align-items-center justify-content-center me-2"
+                        ></i>
+
+                        <p class="fw-normal mb-0 Chef-Tips-content-p">
+                          Use good quality beef broth for best flavor
+                        </p>
+                      </div>
+                      <div
+                        class="Chef-Tips-content rounded-3 px-3 py-4 mb-3 d-flex justify-content-start"
+                      >
+                        <i
+                          class="fa-solid fa-circle-check d-flex align-items-center justify-content-center me-2"
+                        ></i>
+
+                        <p class="fw-normal mb-0 Chef-Tips-content-p">
+                          Gruyère can be substituted with Swiss cheese
+                        </p>
+                      </div>
+                      <div
+                        class="Chef-Tips-content rounded-3 px-3 py-4 mb-3 d-flex justify-content-start"
+                      >
+                        <i
+                          class="fa-solid fa-circle-check d-flex align-items-center justify-content-center me-2"
+                        ></i>
+
+                        <p class="fw-normal mb-0 Chef-Tips-content-p">
+                          Watch carefully when broiling to avoid burning
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-Recipe mt-4 px-4 py-3 rounded-4"
+                  type="submit"
+                >
+                  <i class="fa-solid fa-rotate me-2 text-white"></i>
+                  Try Another Recipe
+                </button>
               </div>
             </div>
           </div>

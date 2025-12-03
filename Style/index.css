@@ -8,6 +8,11 @@
     --two-rem: 2rem;
     --two_half-rem: 2.5rem;
     --three-rem: 3rem;
+    --v-12px: 12px;
+    --v-15px: 15px;
+    --v-20px: 20px;
+    --v-22px: 22px;
+    --v-24px: 24px;
     --fz-10: 10px;
     --fz-12: 12px;
     --fz-14: 14px;
@@ -16,12 +21,15 @@
     --fz-20: 20px;
     --fz-24: 24px;
     --fz-30: 30px;
+    --fz-32: 32px;
     --fz-35: 35px;
     --fz-36: 36px;
     --fz-40: 40px;
     --fz-48: 48px;
     --fz-60: 60px;
     --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
     --fw-700: 700;
     --main-color:oklch(0.21 0.034 264.665);
     --sec-color: oklch(0.446 0.03 256.802);
@@ -110,15 +118,18 @@ transition: all 0.2s ease;
 }
 
 
+body{
+
+    background-color: #FFF9EC;
+}
+
+
 
 
 /* End Of navBar */
 
 /* Main Card */
 
-.main-card{
-    background-color: #FFF9EC;
-}
 
 .food-card{
     height: auto;
@@ -193,26 +204,7 @@ transition: all 0.2s ease;
 }
 
 .food-card-details {
-  scrollbar-width: thin;
-  scrollbar-color: #fdd9d9 transparent;
-}
-
-.food-card-details::-webkit-scrollbar {
-  width: 2px;
-}
-
-.food-card-details::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.food-card-details::-webkit-scrollbar-thumb {
-  background: rgb(0,0,0,0.1);
-  border-radius: 10px;
-  transition: 0.3s all ease;
-}
-
-.food-card-details::-webkit-scrollbar-thumb:hover {
-  background: rgb(180,102,83);
+  overflow-y: hidden;
 }
 
 .green-bg{
@@ -231,7 +223,7 @@ transition: all 0.2s ease;
 }
 
 .food-name{
-    font-size: var(--fz-36);
+    font-size: var(--fz-24);
     color: oklch(0.21 0.034 264.665);
 }
 
@@ -253,8 +245,282 @@ transition: all 0.2s ease;
 
 .food-des{
     color: oklch(0.446 0.03 256.802);
-    font-size: var(--fz-18)
+    font-size: var(--fz-14);
 }
+
+.warning-note{
+    background-color: #FEF2F2;
+    border-left: 4px solid #FB2C36;
+
+}
+
+.fa-triangle-exclamation{
+    color: #FB2C36;
+    font-size: var(--fz-18);
+}
+
+.warning-note h3{
+    color: oklch(0.444 0.177 26.899);
+    font-size: var(--fz-14);
+}
+
+
+
+
+.warning-note p{
+    color: oklch(0.577 0.245 27.325);
+    font-size: var(--fz-10);
+}
+
+
+
+
+
+.nav-and-tabs .nav-tabs {
+    --bs-nav-tabs-border-color: transparent;
+    --bs-nav-tabs-link-hover-border-color: transparent;
+    --bs-nav-tabs-link-active-color: #F54A00;
+}
+
+
+.nav-and-tabs .nav {
+    --bs-nav-link-padding-x: var(--v-22px);
+    --bs-nav-link-font-weight: var(--fw-600);
+    --bs-nav-link-color: #6A7282;
+    --bs-nav-link-hover-color: oklch(0.373 0.034 259.733);
+}
+
+
+.nav-link {
+    --bs-nav-link-padding-x: 0;
+}
+
+
+.nav-and-tabs .nav-tabs .nav-link {
+    --bs-nav-link-font-size: var(--fz-16);
+    position: relative;
+    transition: 0.3s all ease;
+}
+
+.nav-and-tabs .nav-tabs .nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100%;
+    background-color: #F54A00;
+    transition: all 0.3s ease;
+}
+.nav-and-tabs .nav-tabs .nav-link.active::after{
+    width: 100%;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--bs-nav-tabs-link-active-color);
+    --bs-nav-tabs-link-active-border-color: transparent;
+}
+
+
+
+.Chef-Tips-content{
+    background-color: #FFFBEB;
+    border-left: #FFB900 4px solid;
+}
+
+
+.Chef-Tips-content .fa-circle-check{
+    color: #E17100;
+    font-size: var(--fz-18);
+}
+
+.Chef-Tips-content-p{
+    color: oklch(0.373 0.034 259.733);
+    font-size: var(--fz-10);
+}
+
+
+.tab-pane{
+    height: 380px;
+}
+
+.food-card .btn {
+    --bs-btn-font-size: var(--fz-12);
+    --bs-btn-font-weight: var(--fw-600);
+    --bs-btn-color: white;
+    --bs-btn-hover-color: white;
+    --bs-btn-active-color: white
+}
+
+
+
+
+.food-card .btn-Recipe {
+    background: linear-gradient(to right, #FF6800,#FB3035) !important;
+    transition: all 0.3s ease
+}
+
+.food-card .btn-Recipe:hover {
+    background: linear-gradient(to right, #F54800,#E80009) !important;
+    transform: scale(1.05);
+    
+}
+
+
+
+
+
+#Nutrition-tab-pane {
+overflow-y: scroll;
+overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #fdd9d9 transparent;
+}
+
+#Nutrition-tab-pane::-webkit-scrollbar {
+  width: 2px;
+}
+
+#Nutrition-tab-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#Nutrition-tab-pane::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+#Nutrition-tab-pane::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,102,83);
+}
+
+
+
+.Nutrition-item{
+    background-color: #F9FAFB;
+}
+
+
+
+.Nutrition-item .icon-adjustment {
+    padding-inline: var(--v-20px);
+    padding-block: var(--v-12px)
+}
+
+.Nutrition-item .fa-fire {
+    background-color: #FFEDD4;
+    color: #F54A00;
+}
+
+
+.Nutrition-item .fa-dumbbell {
+    background-color: #DBEAFE;
+    color: #155DFC;
+}
+
+
+.Nutrition-item .fa-wheat-awn {
+    background-color: #FEF9C2;
+    color: #D08700;
+}
+
+
+.Nutrition-item .fa-droplet {
+    background-color: #FFE2E2;
+    color: #E7000B;
+}
+
+
+.Nutrition-item .fa-seedling {
+    background-color: #DBFCE7;
+    color: #00A63E;
+}
+
+
+.Nutrition-item .fa-cube {
+    background-color: #FCE7F3;
+    color: #E60076;
+}
+
+
+.Nutrition-item .Nutrition-item-name{
+    color: oklch(0.373 0.034 259.733);
+    font-weight: var(--fw-600);
+    font-size: var(--fz-14);
+}
+
+.Nutrition-item .Nutrition-item-quantity{
+    color: oklch(0.21 0.034 264.665);
+    font-weight: var(--fw-700);
+    font-size: var(--fz-14);
+}
+
+
+
+.Instructions-item-n{
+    font-size: var(--fz-20);
+    background-color: #FF6900;
+    padding-block: 6px;
+    padding-inline: 14px;
+}
+
+
+.Instructions-item-p{
+    font-size: var(--fz-10);
+    color: oklch(0.373 0.034 259.733);
+}
+
+
+#Instructions-tab-pane {
+  scrollbar-width: thin;
+  scrollbar-color: #fdd9d9 transparent;
+}
+
+#Instructions-tab-pane::-webkit-scrollbar {
+  width: 2px;
+}
+
+#Instructions-tab-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#Instructions-tab-pane::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+#Instructions-tab-pane::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,102,83);
+}
+
+
+
+#Ingredients-tab-pane{
+    background: linear-gradient(to right, #FFF7ED, #FFFAEB);
+}
+
+
+
+.Ingredients-item-n{
+    font-size: var(--fz-12);
+    background-color: #FF6900;
+    width: 20px;
+    height: 20px;
+}
+
+
+.Ingredients-item-p{
+    font-size: var(--fz-16);
+    color: oklch(0.373 0.034 259.733);
+}
+
+
+
+
 
 
 /* End Of Main Card */
@@ -268,6 +534,54 @@ transition: all 0.2s ease;
 
 
 @media (min-width: 576px) {
+
+
+.nav-link {
+    --bs-nav-link-padding-x: 22px;
+}
+
+
+
+.food-card .btn {
+    --bs-btn-font-size: var(--one-rem);}
+
+
+.Chef-Tips-content-p{
+    font-size: var(--fz-12);
+}
+
+
+
+.Instructions-item-n{
+    padding-block: var(--v-12px);
+    padding-inline: var(--v-20px);
+}
+
+
+
+.Instructions-item-p{
+    font-size: var(--fz-14);
+}
+
+
+
+.Nutrition-item .Nutrition-item-quantity{
+    font-size: var(--fz-16);
+}
+
+.Nutrition-item .Nutrition-item-name{
+    font-size: var(--fz-16);
+}
+
+
+
+
+
+#Nutrition-tab-pane {
+overflow-y: hidden;
+overflow-x: hidden;
+
+}
 
 
 
@@ -313,6 +627,26 @@ transition: all 0.2s ease;
 }
 
 @media (min-width: 768px) {
+
+
+
+.warning-note h3{
+    font-size: var(--fz-14);
+}
+
+
+
+
+.warning-note p{
+    font-size: var(--fz-12);
+}
+
+
+
+.Chef-Tips-content-p{
+    font-size: var(--fz-14);
+}
+
 
     
 h1{
@@ -362,11 +696,84 @@ h1{
 }
 
 
+    .food-name{
+    font-size: var(--fz-30);
+}
+
+
+
 
 
 }
 
 @media (min-width: 992px) {
+
+.Chef-Tips-content-p{
+    font-size: var(--fz-16);
+}
+
+
+    
+.food-card-details {
+    overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #fdd9d9 transparent;
+}
+
+.food-card-details::-webkit-scrollbar {
+  width: 2px;
+}
+
+.food-card-details::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.food-card-details::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+.food-card-details::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,102,83);
+}
+
+
+    
+.Instructions-item-p{
+    font-size: var(--fz-14);
+}
+
+
+
+    .Nutrition-item .Nutrition-item-name{
+
+    font-size: var(--fz-14);
+}
+
+.Nutrition-item .Nutrition-item-quantity{
+   
+    font-size: var(--fz-18);
+}
+
+
+
+
+
+    .fa-triangle-exclamation{
+    font-size: var(--fz-16);
+}
+
+
+
+    .food-name{
+    font-size: var(--fz-32);
+}
+
+
+.food-des{
+    font-size: var(--fz-16);
+}
 
 
     .food-card{
@@ -388,7 +795,56 @@ h1{
 }
 
 @media (min-width: 1200px) {
-    
+
+        
+.Instructions-item-p{
+    font-size: var(--fz-16);
+}
+
+
+
+        .Nutrition-item .Nutrition-item-name{
+
+    font-size: var(--fz-16);
+}
+
+.Nutrition-item .Nutrition-item-quantity{
+   
+    font-size: var(--fz-20);
+}
+
+
+
+    .fa-triangle-exclamation{
+    font-size: var(--fz-18);
+}
+
+.warning-note h3{
+    font-size: var(--fz-16);
+}
+
+
+
+
+.warning-note p{
+    font-size: var(--fz-14);
+}
+
+
+
+
+
+        .food-name{
+    font-size: var(--fz-36);
+}
+
+
+.food-des{
+    font-size: var(--fz-18);
+}
+
+
+
 }
 
 @media (min-width: 1400px) {
