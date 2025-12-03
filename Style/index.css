@@ -8,9 +8,11 @@
     --two-rem: 2rem;
     --two_half-rem: 2.5rem;
     --three-rem: 3rem;
-    --fz-14: 14px;
+    --fz-10: 10px;
     --fz-12: 12px;
+    --fz-14: 14px;
     --fz-16: 16px;
+    --fz-18: 18px;
     --fz-20: 20px;
     --fz-24: 24px;
     --fz-30: 30px;
@@ -98,9 +100,7 @@ h1{
 
 
 
-.navbar-toggler-icon {
-/* --bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F54A00' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") */
-    
+.navbar-toggler-icon {    
 transition: all 0.2s ease;
 }
 
@@ -114,6 +114,153 @@ transition: all 0.2s ease;
 
 /* End Of navBar */
 
+/* Main Card */
+
+.main-card{
+    background-color: #FFF9EC;
+}
+
+.food-card{
+    height: auto;
+    border: 2px #FFF3DF solid;
+    box-shadow: 0 5px 10px -7px gray;
+}
+
+.food-img{
+    border-top-left-radius: var(--one-rem);
+    border-top-right-radius: var(--one-rem);
+    width: 100%;
+}
+
+.fa-star{
+    color: #FDC700;
+}
+
+.rate-num{
+    color:oklch(0.21 0.034 264.665);
+    font-size: var(--fz-14);
+}
+
+.reviews{
+    font-size: var(--fz-12);
+    color: oklch(0.551 0.027 264.364);
+}
+
+.rating-info {
+    z-index: 1;
+    top: 20px;
+    left: 45px;
+}
+
+.food-making-info p{
+    font-size: var(--fz-10);
+    color: oklch(0.551 0.027 264.364);
+}
+
+.food-making-info h4{
+    font-size: var(--fz-12);
+    color:oklch(0.21 0.034 264.665)
+}
+
+
+.food-making-info .fa-clock{
+    color: #FF6900;
+    font-size: var(--fz-16);
+}
+
+
+.food-making-info .fa-fire-burner{
+    font-size: var(--fz-16);
+    color: #FB2C36;
+}
+
+
+.food-making-info .fa-users{
+    color: #2B7FFF;
+    font-size: var(--fz-16);
+}
+
+
+.food-making-info{
+    z-index: 1;
+    bottom: 20px;
+    left: 45px;
+    right: 45px;
+}
+
+.adjust-photo-height{
+    max-height: 40% !important;
+}
+
+.food-card-details {
+  scrollbar-width: thin;
+  scrollbar-color: #fdd9d9 transparent;
+}
+
+.food-card-details::-webkit-scrollbar {
+  width: 2px;
+}
+
+.food-card-details::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.food-card-details::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+.food-card-details::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,102,83);
+}
+
+.green-bg{
+    background-color: #DBFCE7;
+    color: oklch(0.527 0.154 150.069);
+}
+
+.blue-bg{
+    background-color: #DBEAFE;
+    color: oklch(0.488 0.243 264.376);
+}
+
+.blue-bg,
+.green-bg{
+    font-size: var(--fz-12);
+}
+
+.food-name{
+    font-size: var(--fz-36);
+    color: oklch(0.21 0.034 264.665);
+}
+
+.main-card .fa-bookmark,
+.main-card .fa-share-nodes
+{
+    background-color: #FFEDD4;
+    color: #F54A00;
+    cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.main-card .fa-bookmark:hover
+,
+.main-card .fa-share-nodes:hover{
+    background-color: #FFD7A8;
+}
+
+
+.food-des{
+    color: oklch(0.446 0.03 256.802);
+    font-size: var(--fz-18)
+}
+
+
+/* End Of Main Card */
+
+
+
 
 
 
@@ -121,6 +268,10 @@ transition: all 0.2s ease;
 
 
 @media (min-width: 576px) {
+
+
+
+
     h1{
     font-size: var(--fz-20);
 }
@@ -132,10 +283,37 @@ transition: all 0.2s ease;
 
 
 
+.food-making-info p{
+    font-size: var(--fz-12);
+}
+
+.food-making-info h4{
+    font-size: var(--fz-14);
+}
+
+
+.food-making-info .fa-clock{
+    font-size: var(--fz-18);
+}
+
+
+.food-making-info .fa-fire-burner{
+    font-size: var(--fz-18);
+}
+
+
+.food-making-info .fa-users{
+    font-size: var(--fz-18);
+}
+
+
+
+
 
 }
 
 @media (min-width: 768px) {
+
     
 h1{
     font-size: var(--fz-24);
@@ -151,10 +329,62 @@ h1{
     height: 45px;
 }
 
+.rate-num{
+    font-size: var(--fz-16);
+}
+
+.reviews{
+    font-size: var(--fz-14);
+}
+
+    
+.food-making-info p{
+    font-size: var(--fz-14);
+}
+
+.food-making-info h4{
+    font-size: var(--fz-16);
+}
+
+
+.food-making-info .fa-clock{
+    font-size: var(--fz-20);
+}
+
+
+.food-making-info .fa-fire-burner{
+    font-size: var(--fz-20);
+}
+
+
+.food-making-info .fa-users{
+    font-size: var(--fz-20);
+}
+
+
+
+
 }
 
 @media (min-width: 992px) {
+
+
+    .food-card{
+    height: 750px;}
+
+
+    .food-img{
+    border-top-left-radius: var(--one-rem);
+    border-bottom-left-radius: var(--one-rem);
+    border-top-right-radius: 0;
+
+}
+
     
+.adjust-photo-height{
+    max-height: 100% !important;
+}
+
 }
 
 @media (min-width: 1200px) {

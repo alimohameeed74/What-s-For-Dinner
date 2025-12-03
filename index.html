@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
-      <div class="container-xl container-fluid px-xl-4">
+      <div class="container-xxl container-fluid px-xl-4">
         <div class="navbar-brand d-flex align-items-center">
           <i
             class="fa-solid fa-utensils d-flex justify-content-center align-items-center text-white me-3 rounded-circle p-4"
@@ -64,6 +64,81 @@
         </div>
       </div>
     </nav>
+
+    <section class="py-4 main-card">
+      <div class="container-xxl container-fluid px-xl-4">
+        <div class="food-card bg-white rounded-4 mb-4">
+          <div class="row h-100">
+            <div class="col-lg-5 h-100 adjust-photo-height position-relative">
+              <div
+                class="position-absolute rating-info rounded-pill py-2 px-3 bg-white"
+              >
+                <i class="fa-solid fa-star me-1"></i>
+                <span class="rate-num fw-semibold me-1"> 4.7 </span>
+                <span class="reviews fw-normal"> (267 reviews) </span>
+              </div>
+              <img
+                src="img/Photos/photo-1547592166-23ac45744acd.avif"
+                alt=""
+                class="img-fluid object-fit-cover h-100 food-img"
+              />
+              <div
+                class="position-absolute food-making-info py-4 bg-white rounded-4 d-flex justify-content-evenly"
+              >
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-clock"></i>
+                  <p class="fw-normal mb-0">Prep Time</p>
+                  <h4 class="fw-bold mb-0">15 min</h4>
+                </div>
+
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-fire-burner"></i>
+                  <p class="fw-normal mb-0">Cook Time</p>
+                  <h4 class="fw-bold mb-0">60 min</h4>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <i class="fa-solid fa-users"></i>
+                  <p class="fw-normal mb-0">Servings</p>
+                  <h4 class="fw-bold mb-0">4 people</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 h-100">
+              <div
+                class="food-card-details px-3 py-5 pe-5 overflow-y-scroll h-100"
+              >
+                <div class="d-flex justify-content-start mb-2">
+                  <span
+                    class="me-3 rounded-pill fw-semibold py-1 px-3 green-bg"
+                  >
+                    Intermediate
+                  </span>
+                  <span class="rounded-pill fw-semibold py-1 px-3 blue-bg">
+                    Mediterranean
+                  </span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h2 class="fw-bold food-name">French Onion Soup</h2>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i
+                      class="fa-solid fa-bookmark py-3 px-4 rounded-3 d-flex justify-content-center"
+                    ></i>
+                    <i
+                      class="fa-solid fa-share-nodes ms-3 py-3 px-4 rounded-3 d-flex justify-content-center"
+                    ></i>
+                  </div>
+                </div>
+                <p class="fw-normal food-des">
+                  Rich beef broth with caramelized onions and melted cheese
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="js/index.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
