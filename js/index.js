@@ -9,6 +9,8 @@ var title= document.getElementById('title');
 var foodDes= document.getElementById('food-p');
 var warningNote= document.getElementById('warning-p');
 var ingredientsTab = document.getElementById('Ingredients-tab-pane');
+var instructionsTab = document.getElementById('Instructions-tab-pane');
+var nutritionTab = document.getElementById('Nutrition-content');
 var sharedPhotoURL='photo-';
 var photoIndex=0;
 var ratingBlackBox='';
@@ -16,6 +18,8 @@ var signsBlackBox='';
 var foodTitle='';
 var foodP='';
 var ingredientsTabBlackBox='';
+var instructionsTabBlackBox='';
+var nutritionTabBlackBox='';
 
 
 
@@ -319,27 +323,200 @@ var arrOfIngredients = [
 ];
 
 
-var recipeObject=
-    {
-        photoURL: '',
-        ratings: [],
-        infoArr: [],
-        content: {
-            signs: [],
-            title: '',
-            des: '',
-            isExtendedPreparationTime: function(){
-                return true;
-            },
-            ingredients: [],
-            instructions: [],
-            nutrition: [],
-            chefTips:[],
-        },
-    }
+var arrOfInstructions = [
+  // 0
+  [
+    "Rinse quinoa thoroughly. Cook according to package directions, usually 15 minutes.",
+    "While quinoa cooks, prepare all vegetables and set aside.",
+    "For tahini dressing: mix tahini, lemon juice, garlic, and water until smooth.",
+    "Fluff cooked quinoa with a fork and let cool slightly.",
+    "Arrange quinoa in bowls. Top with tomatoes, cucumber, onion, and olives.",
+    "Sprinkle with feta cheese and fresh parsley. Drizzle with tahini dressing.",
+  ],
+
+  // 1
+  [
+    "Heat sesame oil in a pan. Cook chicken until browned on all sides.",
+    "Add teriyaki sauce to chicken, simmer for 5 minutes until sauce thickens.",
+    "Meanwhile, steam broccoli and carrots until tender-crisp.",
+    "Divide rice between bowls.",
+    "Top with teriyaki chicken and steamed vegetables.",
+    "Garnish with sesame seeds and green onions. Serve hot.",
+  ],
+
+  // 2
+  [
+    "Wash and dry romaine lettuce thoroughly. Tear into bite-sized pieces.",
+    "Place lettuce in a large salad bowl.",
+    "Add Caesar dressing and toss until evenly coated.",
+    "Add croutons and half the parmesan cheese. Toss gently.",
+    "Top with remaining parmesan shavings and anchovies if using.",
+    "Serve immediately with lemon wedges and fresh black pepper.",
+  ],
+
+  // 3
+  [
+    "Melt butter in a large pot. Add onions and cook slowly for 40 minutes, stirring occasionally until caramelized.",
+    "Add white wine and deglaze the pot, scraping up brown bits.",
+    "Pour in beef broth, add bay leaves and thyme. Simmer for 20 minutes.",
+    "Meanwhile, toast baguette slices until golden.",
+    "Ladle soup into oven-safe bowls. Top with toasted bread and cheese.",
+    "Broil for 3-5 minutes until cheese is melted and bubbly. Serve hot.",
+  ],
+
+  // 4
+  [
+    "Soak rice noodles in warm water for 30 minutes. Drain and set aside.",
+    "Mix tamarind paste, fish sauce, and palm sugar to make the sauce.",
+    "Heat wok over high heat. Scramble eggs and set aside.",
+    "Cook shrimp until pink. Add noodles and sauce, toss for 2-3 minutes.",
+    "Add scrambled eggs and bean sprouts. Toss everything together.",
+    "Serve topped with crushed peanuts, lime wedges, and cilantro.",
+  ],
+
+  // 5
+  [
+    "Heat a large pot or wok over medium heat. Add curry paste and cook for 1 minute until fragrant.",
+    "Add half the coconut milk and stir to combine with the curry paste.",
+    "Add sliced chicken and cook until no longer pink, about 5 minutes.",
+    "Add remaining coconut milk, vegetables, fish sauce, and palm sugar.",
+    "Simmer for 15-20 minutes until vegetables are tender and sauce has thickened.",
+    "Stir in fresh Thai basil leaves. Serve hot with jasmine rice.",
+  ],
+
+  // 6
+  [
+    "Pat salmon fillets dry with paper towels. Season with salt and pepper.",
+    "In a small bowl, whisk together honey, soy sauce, minced garlic, and grated ginger.",
+    "Heat olive oil in a large skillet over medium-high heat.",
+    "Place salmon fillets skin-side up in the pan. Cook for 4-5 minutes until golden.",
+    "Flip salmon and pour honey garlic sauce over the top. Cook for another 4-5 minutes.",
+    "Garnish with sesame seeds and sliced green onions. Serve with steamed vegetables or rice.",
+  ],
+
+  // 7
+  [
+    "Slice ciabatta bread in half horizontally.",
+    "Toast bread lightly until just crispy.",
+    "Spread pesto on both sides of bread.",
+    "Layer mozzarella slices, tomato slices, and fresh basil leaves.",
+    "Drizzle with olive oil and balsamic glaze. Season with salt and pepper.",
+    "Close sandwich, cut in half, and serve immediately.",
+  ],
+
+  // 8
+  [
+    "Heat oil in a large pot. Sauté onion until soft, add garlic and curry powder, cook for 1 minute.",
+    "Add potatoes and carrots, cook for 5 minutes.",
+    "Pour in coconut milk and 1 cup water. Bring to simmer.",
+    "Add cauliflower and chickpeas. Cook for 20 minutes until vegetables are tender.",
+    "Stir in fresh spinach and cook until wilted.",
+    "Serve hot over basmati rice or with naan bread.",
+  ],
+
+  // 9
+  [
+    "Heat a large skillet over medium-high heat. Cook ground beef until browned.",
+    "Add diced onion and cook until softened, about 5 minutes.",
+    "Stir in taco seasoning and 1/2 cup water. Simmer for 10 minutes.",
+    "Warm taco shells according to package directions.",
+    "Fill each shell with seasoned beef.",
+    "Top with lettuce, tomatoes, cheese, sour cream, and salsa. Serve immediately.",
+  ],
+
+  // 10
+  [
+    "Marinate chicken in half the yogurt and 1 tablespoon tikka paste for at least 30 minutes.",
+    "Heat oil in a large pan, cook marinated chicken until browned. Remove and set aside.",
+    "In the same pan, sauté onion until soft. Add garlic and ginger, cook for 1 minute.",
+    "Add remaining tikka paste and canned tomatoes. Simmer for 10 minutes.",
+    "Stir in coconut cream and remaining yogurt. Add chicken back to the pan.",
+    "Simmer for 15 minutes until sauce thickens. Garnish with cilantro and serve with rice.",
+  ],
+
+  // 11
+  [
+    "Divide ground beef into 4 equal portions. Form into patties, making a small indent in the center.",
+    "Season patties generously with salt and pepper on both sides.",
+    "Heat a grill or skillet over high heat. Cook patties for 4-5 minutes per side for medium.",
+    "Add cheese slices in the last minute of cooking and cover to melt.",
+    "Toast burger buns lightly on the grill or in a pan.",
+    "Assemble burgers with lettuce, tomato, onion, pickles, and your favorite sauce.",
+  ],
+
+  // 12
+  [
+    "Let pizza dough come to room temperature and rest for 1 hour.",
+    "Preheat oven to maximum temperature (usually 250°C/480°F).",
+    "Mix crushed tomatoes with olive oil, garlic, salt, and pepper for the sauce.",
+    "Roll out dough on a floured surface to desired thickness.",
+    "Spread tomato sauce, add torn mozzarella pieces, and drizzle with olive oil.",
+    "Bake for 10-12 minutes until crust is golden. Top with fresh basil and parmesan.",
+  ],
+
+  // 13
+  [
+    "Cook ground beef with onion and carrots until browned. Add tomatoes and simmer for 30 minutes.",
+    "Cook lasagna sheets according to package directions. Drain and set aside.",
+    "Preheat oven to 180°C (350°F).",
+    "In a baking dish, layer: meat sauce, lasagna sheets, béchamel sauce. Repeat 3-4 times.",
+    "Top with béchamel, mozzarella, and parmesan cheese.",
+    "Bake for 45 minutes until golden and bubbly. Let rest 10 minutes before serving.",
+  ],
+
+  // 14
+  [
+    "Heat oil in a large pot. Sauté onion until soft, add garlic and curry powder, cook for 1 minute.",
+    "Add potatoes and carrots, cook for 5 minutes.",
+    "Pour in coconut milk and 1 cup water. Bring to simmer.",
+    "Add cauliflower and chickpeas. Cook for 20 minutes until vegetables are tender.",
+    "Stir in fresh spinach and cook until wilted.",
+    "Serve hot over basmati rice or with naan bread.",
+  ],
+
+  // 15
+  [
+    "Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.",
+    "Brush eggplant slices with olive oil, grill or bake until softened.",
+    "Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.",
+    "Preheat oven to 180°C (350°F).",
+    "Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with béchamel and parmesan.",
+    "Bake for 45 minutes until golden. Let rest 15 minutes before serving.",
+  ],
+
+  // 16
+  [
+    "Mix soy sauce, oyster sauce, and sesame oil for the sauce.",
+    "Heat wok over high heat with oil. Cook chicken until golden, remove and set aside.",
+    "Add more oil if needed. Stir-fry garlic and ginger for 30 seconds.",
+    "Add vegetables, starting with hardest ones (carrots, broccoli). Cook for 3-4 minutes.",
+    "Return chicken to wok, add bell peppers and sauce. Toss for 2 minutes.",
+    "Serve immediately over steamed rice or noodles.",
+  ],
+
+  // 17
+  [
+    "Bring a large pot of salted water to boil. Cook spaghetti according to package directions until al dente.",
+    "While pasta cooks, heat a large skillet over medium heat. Add diced pancetta and cook until crispy, about 5-7 minutes.",
+    "In a bowl, whisk together eggs, grated Pecorino Romano, and Parmesan cheese. Add plenty of freshly ground black pepper.",
+    "Reserve 1 cup of pasta cooking water before draining. Drain pasta and immediately add to the skillet with pancetta.",
+    "Remove skillet from heat. Quickly pour in egg mixture while tossing pasta vigorously. Add reserved pasta water as needed to create a creamy sauce.",
+    "Serve immediately with extra cheese and black pepper on top. Enjoy your authentic carbonara!",
+  ],
+
+  // 18
+  [
+    "Cook linguine according to package directions. Reserve 1 cup pasta water.",
+    "Heat olive oil and 2 tablespoons butter in a large pan. Add garlic and red pepper flakes, cook for 1 minute.",
+    "Add shrimp, cook until pink on both sides, about 3-4 minutes. Remove and set aside.",
+    "Add white wine to pan, simmer for 2 minutes. Add remaining butter and lemon juice.",
+    "Return shrimp to pan, add cooked pasta and toss. Add pasta water if needed.",
+    "Garnish with parsley, lemon zest, and serve immediately.",
+  ],
+];
 
 
-
+var arrOfNutrition =[]
 
 
 
@@ -375,8 +552,9 @@ function init(){
     else{
         warningNote.classList.add('d-none')
     }
-    loopOningredientsTab(arrOfIngredients[photoIndex]);
-
+    loopOnIngredientsTab(arrOfIngredients[photoIndex]);
+    loopOnInstructionsTab(arrOfInstructions[photoIndex]);
+    loopOnNutritionTab(arrOfNutrition[photoIndex]);
 
     assignChangings();
    
@@ -417,7 +595,9 @@ function getAnotherFood(){
         warningNote.classList.add('d-none')
     }
 
-    loopOningredientsTab(arrOfIngredients[photoIndex]);
+    loopOnIngredientsTab(arrOfIngredients[photoIndex]);
+    loopOnInstructionsTab(arrOfInstructions[photoIndex]);
+    loopOnNutritionTab(arrOfNutrition[photoIndex]);
 
 
 
@@ -440,9 +620,12 @@ function assignChangings(){
     title.innerHTML=foodTitle;
     foodDes.innerHTML=foodP;
     ingredientsTab.innerHTML=ingredientsTabBlackBox;
+    instructionsTab.innerHTML=instructionsTabBlackBox;
+    nutritionTab.innerHTML=nutritionTabBlackBox;
 }
 
-function loopOningredientsTab(arr){
+
+function loopOnIngredientsTab(arr){
     ingredientsTabBlackBox='';
     for (let i=0;i<arr.length;i++){
         ingredientsTabBlackBox+=`
@@ -459,6 +642,34 @@ function loopOningredientsTab(arr){
             </p>
           </div>`
     }
+}
+
+
+
+function loopOnInstructionsTab(arr){
+    instructionsTabBlackBox='';
+    for (let i=0;i<arr.length;i++){
+        instructionsTabBlackBox+=`
+        <div
+        class="Instructions-item mb-4 d-flex justify-content-start align-items-center"
+        >
+        <span
+            class="me-2 Instructions-item-n fw-bold text-white rounded-4 d-flex"
+        >
+            ${i+1}</span
+        >
+        <p class="Instructions-item-p fw-normal mb-0">
+            ${arr[i]}
+        </p>
+        </div>`
+    }
+}
+
+
+
+function loopOnNutritionTab(arr){
+    nutritionTabBlackBox='';
+
 }
 
 
