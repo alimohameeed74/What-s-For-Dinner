@@ -10,6 +10,7 @@ var foodDes= document.getElementById('food-p');
 var warningNote= document.getElementById('warning-p');
 var ingredientsTab = document.getElementById('Ingredients-tab-pane');
 var instructionsTab = document.getElementById('Instructions-tab-pane');
+var chefTipsTab = document.getElementById('Chef-Tips-tab-pane');
 var nutritionTab = document.getElementById('Nutrition-content');
 var sharedPhotoURL='photo-';
 var photoIndex=0;
@@ -20,8 +21,7 @@ var foodP='';
 var ingredientsTabBlackBox='';
 var instructionsTabBlackBox='';
 var nutritionTabBlackBox='';
-
-
+var chefTipsTabBlackBox='';
 
 
 
@@ -708,6 +708,143 @@ var arrOfNutrition = [
   ]
 ];
 
+var arrOfChefTips = [
+  [
+    "Rinse quinoa well to remove bitter coating",
+    "Let quinoa cool before adding fresh ingredients",
+    "Make extra tahini dressing - it keeps well in the fridge",
+    "Add grilled chicken or chickpeas for extra protein"
+  ], // 0
+
+  [
+    "Use chicken thighs for juicier meat",
+    "Make homemade teriyaki sauce for better flavor control",
+    "Add edamame for extra protein",
+    "Meal prep by cooking rice and chicken ahead"
+  ], // 1
+
+  [
+    "Use cold, crisp lettuce for best texture",
+    "Make homemade croutons for better flavor",
+    "Add grilled chicken for a complete meal",
+    "Don't dress salad until ready to serve"
+  ], // 2
+
+  [
+    "Patience is key - don't rush the onion caramelization",
+    "Use good quality beef broth for best flavor",
+    "Gruyère can be substituted with Swiss cheese",
+    "Watch carefully when broiling to avoid burning"
+  ], // 3
+
+  [
+    "Don't oversoak noodles or they'll be mushy",
+    "Cook on high heat for authentic wok flavor",
+    "Balance sweet, sour, and salty flavors",
+    "Prepare all ingredients before starting to cook"
+  ], // 4
+
+  [
+    "Adjust spice level by using more or less curry paste",
+    "Add vegetables in stages based on cooking time needed",
+    "Fresh Thai basil is essential for authentic flavor",
+    "Use full-fat coconut milk for richest, creamiest sauce"
+  ], // 5
+
+  [
+    "Don't overcook salmon - it should be slightly pink in the center",
+    "Use wild-caught salmon for best flavor and nutrition",
+    "Let the sauce caramelize slightly for deeper flavor",
+    "Pair with steamed broccoli or asparagus for a complete meal"
+  ], // 6
+
+  [
+    "Use ripe, in-season tomatoes for best flavor",
+    "Buffalo mozzarella is traditional but harder to slice",
+    "Toast bread lightly - not too crispy",
+    "Add prosciutto or salami for a heartier sandwich"
+  ], // 7
+
+  [
+    "Use pork shoulder for best results - it stays moist",
+    "Let pork rest before shredding for juicier meat",
+    "Make your own BBQ sauce for better flavor",
+    "Leftovers freeze well for up to 3 months"
+  ], // 8
+
+  [
+    "Drain excess fat from beef for healthier tacos",
+    "Warm shells in oven for better texture",
+    "Prepare all toppings before cooking beef",
+    "Use ground turkey for a lighter option"
+  ], // 9
+
+  [
+    "Marinate chicken overnight for deeper flavor",
+    "Use full-fat coconut cream for richest sauce",
+    "Adjust spice level by varying the tikka paste amount",
+    "Serve with naan bread and basmati rice"
+  ], // 10
+
+  [
+    "Don't press down on burgers while cooking - keeps them juicy",
+    "Make indent in center to prevent burger from puffing up",
+    "Let patties rest for 2-3 minutes before serving",
+    "Toast buns for better texture and flavor"
+  ], // 11
+
+  [
+    "Use a pizza stone for crispier crust",
+    "Don't overload with toppings - less is more",
+    "Add basil after baking to keep it fresh",
+    "Let dough rest properly for best texture"
+  ], // 12
+
+  [
+    "Make bolognese sauce a day ahead for better flavor",
+    "Don't skip the resting time after baking",
+    "Use fresh pasta sheets for best texture",
+    "Freeze leftovers in individual portions"
+  ], // 13
+
+  [
+    "Add vegetables in order of cooking time needed",
+    "Adjust curry powder amount to taste",
+    "Use full-fat coconut milk for creamier curry",
+    "Add protein like tofu or paneer if desired"
+  ], // 14
+
+  [
+    "Salt eggplant to remove bitterness",
+    "Don't skip the resting time - it helps set the layers",
+    "Use ground beef if lamb is unavailable",
+    "Make ahead and reheat for easier serving"
+  ], // 15
+
+  [
+    "Cut all ingredients before starting to cook",
+    "Keep heat high for authentic stir-fry texture",
+    "Don't overcrowd the wok or vegetables will steam",
+    "Add cashews or peanuts for extra crunch"
+  ], // 16
+
+  [
+    "Use room temperature eggs for a smoother sauce consistency",
+    "Work quickly when mixing eggs with hot pasta to avoid scrambling",
+    "Reserve extra pasta water - it's the secret to perfect creaminess",
+    "Freshly grated cheese makes all the difference in flavor",
+    "Never add cream - authentic carbonara is made with eggs only"
+  ], // 17
+
+  [
+    "Don't overcook shrimp - they cook very quickly",
+    "Use good quality white wine for best flavor",
+    "Toss pasta in sauce for maximum flavor absorption",
+    "Add extra lemon for bright, fresh taste"
+  ] // 18
+];
+
+
 
 
 
@@ -746,6 +883,7 @@ function init(){
     loopOnIngredientsTab(arrOfIngredients[photoIndex]);
     loopOnInstructionsTab(arrOfInstructions[photoIndex]);
     loopOnNutritionTab(arrOfNutrition[photoIndex]);
+    loopOnchefTipsTab(arrOfChefTips[photoIndex]);
 
     assignChangings();
    
@@ -757,7 +895,7 @@ function getAnotherFood(){
 
     photoIndex=Math.floor(arrOfRatings.length*(Math.random()));
     photoTag.setAttribute("src", `img/Photos/${sharedPhotoURL}${photoIndex}.avif`);
-    // window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     ratingBlackBox=`
     <i class="fa-solid fa-star me-1"></i>
     <span id="rate" class="rate-num fw-semibold me-1"> ${arrOfRatings[photoIndex][0]} </span>
@@ -789,6 +927,7 @@ function getAnotherFood(){
     loopOnIngredientsTab(arrOfIngredients[photoIndex]);
     loopOnInstructionsTab(arrOfInstructions[photoIndex]);
     loopOnNutritionTab(arrOfNutrition[photoIndex]);
+    loopOnchefTipsTab(arrOfChefTips[photoIndex]);
     assignChangings();
 }
 
@@ -810,6 +949,7 @@ function assignChangings(){
     ingredientsTab.innerHTML=ingredientsTabBlackBox;
     instructionsTab.innerHTML=instructionsTabBlackBox;
     nutritionTab.innerHTML=nutritionTabBlackBox;
+    chefTipsTab.innerHTML=chefTipsTabBlackBox;
 }
 
 
@@ -871,6 +1011,25 @@ function loopOnNutritionTab(arr){
             ${arr[i][1]} 
         </span>
         </div>
+        </div>`
+    }
+}
+
+
+function loopOnchefTipsTab(arr){
+    chefTipsTabBlackBox='';
+    for (let i=0;i<arr.length;i++){
+        chefTipsTabBlackBox+=`
+        <div
+        class="Chef-Tips-content rounded-3 px-3 py-4 mb-3 d-flex justify-content-start"
+        >
+        <i
+            class="fa-solid fa-circle-check d-flex align-items-center justify-content-center me-2"
+        ></i>
+
+        <p class="fw-normal mb-0 Chef-Tips-content-p">
+            ${arr[i]}
+        </p>
         </div>`
     }
 }

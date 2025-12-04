@@ -340,6 +340,32 @@ body{
 }
 
 
+#Chef-Tips-tab-pane {
+overflow-y: scroll;
+overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #fdd9d9 transparent;
+}
+
+#Chef-Tips-tab-pane::-webkit-scrollbar {
+  width: 2px;
+}
+
+#Chef-Tips-tab-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#Chef-Tips-tab-pane::-webkit-scrollbar-thumb {
+  background: rgb(0,0,0,0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+#Chef-Tips-tab-pane::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,102,83);
+}
+
+
 .tab-pane{
     height: 380px;
 }
