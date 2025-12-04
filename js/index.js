@@ -519,192 +519,192 @@ var arrOfInstructions = [
 var arrOfNutrition = [
   // 0
   [
-    ["Calories", 480,'fa-fire'],
-    ["Protein", 18, 'fa-dumbbell'],
-    ["Carbohydrates", 58, 'fa-wheat-awn '],
-    ["Fat", 20,'fa-droplet'],
-    ["Fiber", 10,'fa-seedling'],
-    ["Sodium" , 540,'fa-cube']
+    ["Calories", '480 kcal','fa-fire'],
+    ["Protein", '18g', 'fa-dumbbell'],
+    ["Carbohydrates", '58g', 'fa-wheat-awn '],
+    ["Fat", '20g','fa-droplet'],
+    ["Fiber", '10g','fa-seedling'],
+    ["Sodium" , '540mg','fa-cube']
   ],
 
   // 1
   [
-    ["Calories", 540,'fa-fire'],
-    ["Protein", 42, 'fa-dumbbell'],
-    ["Carbohydrates", 58, 'fa-wheat-awn '],
-    ["Fat", 14,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 1240,'fa-cube']
+    ["Calories", '540 kcal','fa-fire'],
+    ["Protein", '42g', 'fa-dumbbell'],
+    ["Carbohydrates", '58g', 'fa-wheat-awn '],
+    ["Fat", '14g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '1240mg','fa-cube']
   ],
 
   // 2
   [
-    ["Calories", 320,'fa-fire'],
-    ["Protein", 12, 'fa-dumbbell'],
-    ["Carbohydrates", 18, 'fa-wheat-awn '],
-    ["Fat", 22,'fa-droplet'],
-    ["Fiber", 3,'fa-seedling'],
-    ["Sodium" , 680,'fa-cube']
+    ["Calories", '320 kcal','fa-fire'],
+    ["Protein", '12g', 'fa-dumbbell'],
+    ["Carbohydrates", '18g', 'fa-wheat-awn '],
+    ["Fat", '22g','fa-droplet'],
+    ["Fiber", '3g','fa-seedling'],
+    ["Sodium" , '680mg','fa-cube']
   ],
 
   // 3
   [
-    ["Calories", 380,'fa-fire'],
-    ["Protein", 18, 'fa-dumbbell'],
-    ["Carbohydrates", 36, 'fa-wheat-awn '],
-    ["Fat", 18,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 980,'fa-cube']
+    ["Calories", '380 kcal','fa-fire'],
+    ["Protein", '18g', 'fa-dumbbell'],
+    ["Carbohydrates", '36g', 'fa-wheat-awn '],
+    ["Fat", '18g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '980mg','fa-cube']
   ],
 
   // 4
   [
-    ["Calories", 540,'fa-fire'],
-    ["Protein", 32, 'fa-dumbbell'],
-    ["Carbohydrates", 62, 'fa-wheat-awn '],
-    ["Fat", 16,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 1120,'fa-cube']
+    ["Calories", '540 kcal','fa-fire'],
+    ["Protein", '32g', 'fa-dumbbell'],
+    ["Carbohydrates", '62g', 'fa-wheat-awn '],
+    ["Fat", '16g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '1120mg','fa-cube']
   ],
 
   // 5
   [
-    ["Calories", 420,'fa-fire'],
-    ["Protein", 26, 'fa-dumbbell'],
-    ["Carbohydrates", 22, 'fa-wheat-awn '],
-    ["Fat", 26,'fa-droplet'],
-    ["Fiber", 5,'fa-seedling'],
-    ["Sodium" , 890,'fa-cube']
+    ["Calories", '420 kcal','fa-fire'],
+    ["Protein", '26g', 'fa-dumbbell'],
+    ["Carbohydrates", '22g', 'fa-wheat-awn '],
+    ["Fat", '26g','fa-droplet'],
+    ["Fiber", '5g','fa-seedling'],
+    ["Sodium" , '890mg','fa-cube']
   ],
 
   // 6
   [
-    ["Calories", 380,'fa-fire'],
-    ["Protein", 35, 'fa-dumbbell'],
-    ["Carbohydrates", 28, 'fa-wheat-awn '],
-    ["Fat", 14,'fa-droplet'],
-    ["Fiber", 0,'fa-seedling'],
-    ["Sodium" , 720,'fa-cube']
+    ["Calories", '380 kcal','fa-fire'],
+    ["Protein", '35g', 'fa-dumbbell'],
+    ["Carbohydrates", '28g', 'fa-wheat-awn '],
+    ["Fat", '14g','fa-droplet'],
+    ["Fiber", '0g','fa-seedling'],
+    ["Sodium" , '720mg','fa-cube']
   ],
 
   // 7
   [
-    ["Calories", 480,'fa-fire'],
-    ["Protein", 22, 'fa-dumbbell'],
-    ["Carbohydrates", 48, 'fa-wheat-awn '],
-    ["Fat", 22,'fa-droplet'],
-    ["Fiber", 3,'fa-seedling'],
-    ["Sodium" , 680,'fa-cube']
+    ["Calories", '480 kcal','fa-fire'],
+    ["Protein", '22g', 'fa-dumbbell'],
+    ["Carbohydrates", '48g', 'fa-wheat-awn '],
+    ["Fat", '22g','fa-droplet'],
+    ["Fiber", '3g','fa-seedling'],
+    ["Sodium" , '680mg','fa-cube']
   ],
 
   // 8
   [
-    ["Calories", 620,'fa-fire'],
-    ["Protein", 48, 'fa-dumbbell'],
-    ["Carbohydrates", 52, 'fa-wheat-awn '],
-    ["Fat", 22,'fa-droplet'],
-    ["Fiber", 3,'fa-seedling'],
-    ["Sodium" , 1180,'fa-cube']
+    ["Calories", '620 kcal','fa-fire'],
+    ["Protein", '48g', 'fa-dumbbell'],
+    ["Carbohydrates", '52g', 'fa-wheat-awn '],
+    ["Fat", '22g','fa-droplet'],
+    ["Fiber", '3g','fa-seedling'],
+    ["Sodium" , '1180mg','fa-cube']
   ],
 
   // 9
   [
-    ["Calories", 420,'fa-fire'],
-    ["Protein", 26, 'fa-dumbbell'],
-    ["Carbohydrates", 32, 'fa-wheat-awn '],
-    ["Fat", 20,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 780,'fa-cube']
+    ["Calories", '420 kcal','fa-fire'],
+    ["Protein", '26g', 'fa-dumbbell'],
+    ["Carbohydrates", '32g', 'fa-wheat-awn '],
+    ["Fat", '20g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '780mg','fa-cube']
   ],
 
   // 10
   [
-    ["Calories", 450,'fa-fire'],
-    ["Protein", 38, 'fa-dumbbell'],
-    ["Carbohydrates", 24, 'fa-wheat-awn '],
-    ["Fat", 22,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 760,'fa-cube']
+    ["Calories", '450 kcal','fa-fire'],
+    ["Protein", '38g', 'fa-dumbbell'],
+    ["Carbohydrates", '24g', 'fa-wheat-awn '],
+    ["Fat", '22g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '760mg','fa-cube']
   ],
 
   // 11
   [
-    ["Calories", 650,'fa-fire'],
-    ["Protein", 38, 'fa-dumbbell'],
-    ["Carbohydrates", 42, 'fa-wheat-awn '],
-    ["Fat", 35,'fa-droplet'],
-    ["Fiber", 2,'fa-seedling'],
-    ["Sodium" , 920,'fa-cube']
+    ["Calories", '650 kcal','fa-fire'],
+    ["Protein", '38g', 'fa-dumbbell'],
+    ["Carbohydrates", '42g', 'fa-wheat-awn '],
+    ["Fat", '35g','fa-droplet'],
+    ["Fiber", '2g','fa-seedling'],
+    ["Sodium" , '920mg','fa-cube']
   ],
 
   // 12
   [
-    ["Calories", 580,'fa-fire'],
-    ["Protein", 24, 'fa-dumbbell'],
-    ["Carbohydrates", 68, 'fa-wheat-awn '],
-    ["Fat", 22,'fa-droplet'],
-    ["Fiber", 4,'fa-seedling'],
-    ["Sodium" , 920,'fa-cube']
+    ["Calories", '580 kcal','fa-fire'],
+    ["Protein", '24g', 'fa-dumbbell'],
+    ["Carbohydrates", '68g', 'fa-wheat-awn '],
+    ["Fat", '22g','fa-droplet'],
+    ["Fiber", '4g','fa-seedling'],
+    ["Sodium" , '920mg','fa-cube']
   ],
 
   // 13
   [
-    ["Calories", 680,'fa-fire'],
-    ["Protein", 42, 'fa-dumbbell'],
-    ["Carbohydrates", 58, 'fa-wheat-awn '],
-    ["Fat", 28,'fa-droplet'],
-    ["Fiber", 6,'fa-seedling'],
-    ["Sodium" , 920,'fa-cube']
+    ["Calories", '680 kcal','fa-fire'],
+    ["Protein", '42g', 'fa-dumbbell'],
+    ["Carbohydrates", '58g', 'fa-wheat-awn '],
+    ["Fat", '28g','fa-droplet'],
+    ["Fiber", '6g','fa-seedling'],
+    ["Sodium" , '920mg','fa-cube']
   ],
 
   // 14
   [
-    ["Calories", 380,'fa-fire'],
-    ["Protein", 14, 'fa-dumbbell'],
-    ["Carbohydrates", 48, 'fa-wheat-awn '],
-    ["Fat", 16,'fa-droplet'],
-    ["Fiber", 12,'fa-seedling'],
-    ["Sodium" , 480,'fa-cube']
+    ["Calories", '380 kcal','fa-fire'],
+    ["Protein", '14g', 'fa-dumbbell'],
+    ["Carbohydrates", '48g', 'fa-wheat-awn '],
+    ["Fat", '16g','fa-droplet'],
+    ["Fiber", '12g','fa-seedling'],
+    ["Sodium" , '480mg','fa-cube']
   ],
 
   // 15
   [
-    ["Calories", 580,'fa-fire'],
-    ["Protein", 36, 'fa-dumbbell'],
-    ["Carbohydrates", 32, 'fa-wheat-awn '],
-    ["Fat", 32,'fa-droplet'],
-    ["Fiber", 8,'fa-seedling'],
-    ["Sodium" , 820,'fa-cube']
+    ["Calories", '580 kcal','fa-fire'],
+    ["Protein", '36g', 'fa-dumbbell'],
+    ["Carbohydrates", '32g', 'fa-wheat-awn '],
+    ["Fat", '32g','fa-droplet'],
+    ["Fiber", '8g','fa-seedling'],
+    ["Sodium" , '820mg','fa-cube']
   ],
 
   // 16
   [
-    ["Calories", 320,'fa-fire'],
-    ["Protein", 34, 'fa-dumbbell'],
-    ["Carbohydrates", 18, 'fa-wheat-awn '],
-    ["Fat", 12,'fa-droplet'],
-    ["Fiber", 5,'fa-seedling'],
-    ["Sodium" , 840,'fa-cube']
+    ["Calories", '320 kcal','fa-fire'],
+    ["Protein", '34g', 'fa-dumbbell'],
+    ["Carbohydrates", '18g', 'fa-wheat-awn '],
+    ["Fat", '12g','fa-droplet'],
+    ["Fiber", '5g','fa-seedling'],
+    ["Sodium" , '840mg','fa-cube']
   ],
 
   // 17
   [
-    ["Calories", 520,'fa-fire'],
-    ["Protein", 28, 'fa-dumbbell'],
-    ["Carbohydrates", 62, 'fa-wheat-awn '],
-    ["Fat", 18,'fa-droplet'],
-    ["Fiber", 3,'fa-seedling'],
-    ["Sodium" , 680,'fa-cube']
+    ["Calories", '520 kcal','fa-fire'],
+    ["Protein", '28g', 'fa-dumbbell'],
+    ["Carbohydrates", '62g', 'fa-wheat-awn '],
+    ["Fat", '18g','fa-droplet'],
+    ["Fiber", '3g','fa-seedling'],
+    ["Sodium" , '680mg','fa-cube']
   ],
 
   // 18
   [
-    ["Calories", 520,'fa-fire'],
-    ["Protein", 36, 'fa-dumbbell'],
-    ["Carbohydrates", 54, 'fa-wheat-awn '],
-    ["Fat", 18,'fa-droplet'],
-    ["Fiber", 3,'fa-seedling'],
-    ["Sodium" , 620,'fa-cube']
+    ["Calories", '520 kcal','fa-fire'],
+    ["Protein", '36g', 'fa-dumbbell'],
+    ["Carbohydrates", '54g', 'fa-wheat-awn '],
+    ["Fat", '18g','fa-droplet'],
+    ["Fiber", '3g','fa-seedling'],
+    ["Sodium" , '620mg','fa-cube']
   ]
 ];
 
@@ -868,7 +868,7 @@ function loopOnNutritionTab(arr){
         ></i>
         <span class="Nutrition-item-name">${arr[i][0]}</span>
         <span class="Nutrition-item-quantity ms-auto">
-            ${arr[i][1]} kcal
+            ${arr[i][1]} 
         </span>
         </div>
         </div>`
