@@ -103,21 +103,12 @@
             </div>
             <div class="col-lg-7 h-100">
               <div class="food-card-details px-3 py-5 pe-lg-5 h-100">
-                <div id="signs" class="d-flex justify-content-start mb-3">
-                  <span
-                    class="me-3 rounded-pill fw-semibold py-1 px-3 green-bg"
-                  >
-                    Intermediate
-                  </span>
-                  <span class="rounded-pill fw-semibold py-1 px-3 blue-bg">
-                    Mediterranean
-                  </span>
-                </div>
+                <div id="signs" class="d-flex justify-content-start mb-3"></div>
                 <div
                   class="d-flex flex-column-reverse flex-sm-row justify-content-between align-items-sm-center align-items-start align-items-sm-center"
                 >
                   <div>
-                    <h2 class="fw-bold food-name mb-0">French Onion Soup</h2>
+                    <h2 id="title" class="fw-bold food-name mb-0"></h2>
                   </div>
                   <div class="d-flex ms-auto ms-sm-0">
                     <i
@@ -128,10 +119,9 @@
                     ></i>
                   </div>
                 </div>
-                <p class="fw-normal food-des">
-                  Rich beef broth with caramelized onions and melted cheese
-                </p>
+                <p id="food-p" class="fw-normal food-des"></p>
                 <div
+                  id="warning-p"
                   class="warning-note rounded-3 p-3 mb-3 d-flex justify-content-start"
                 >
                   <i
@@ -222,106 +212,7 @@
                       role="tabpanel"
                       aria-labelledby="Ingredients-tab"
                       tabindex="0"
-                    >
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          1</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          4 large onions, thinly sliced
-                        </p>
-                      </div>
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          2</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          4 tablespoons butter
-                        </p>
-                      </div>
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          3</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          1 liter beef broth
-                        </p>
-                      </div>
-
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          4</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          1/2 cup white wine
-                        </p>
-                      </div>
-
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          5</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          2 bay leaves
-                        </p>
-                      </div>
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          6</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          Fresh thyme
-                        </p>
-                      </div>
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          7</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          Baguette slices
-                        </p>
-                      </div>
-                      <div
-                        class="Ingredients-item mb-3 d-flex justify-content-start align-items-center"
-                      >
-                        <span
-                          class="me-2 p-2 Ingredients-item-n fw-bold text-white rounded-circle d-flex justify-content-center align-items-center"
-                        >
-                          8</span
-                        >
-                        <p class="Ingredients-item-p fw-normal mb-0">
-                          200g Gruyère cheese, grated
-                        </p>
-                      </div>
-                    </div>
+                    ></div>
                     <div
                       class="tab-pane fade overflow-y-scroll"
                       id="Instructions-tab-pane"
